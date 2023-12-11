@@ -11,7 +11,32 @@
 
   > Currently only supports Linux and WSL subsystem, tested on Ubuntu 22.04 in WSL2 on Win10
 
-  ### **1. Unpack**
+  ### **1. Install Python 3 and Dependencies**
+  First, grant execute permissions to the folder.
+
+  ```shell
+  cd path/to/script
+  chmod -R a+x .
+  ```
+  Then, install Python 3.
+
+  ```shell
+  sudo apt-get update
+  sudo apt-get install python3
+  ```
+  Next, install Python 3-pip.
+
+  ```shell
+  sudo apt-get install python3-pip
+  ```
+  After that, install Protobuf.
+
+  ```shell
+  pip3 install protobuf==3.17.3
+  sudo pip3 install protobuf==3.17.3
+  ```
+
+  ### **2. Unpack**
 
   ```shell
   cd path/to/script
@@ -20,7 +45,7 @@
 
   After unpacking, manifest and payload folders will be generated under the script path. The manifest folder contains metadata that usually doesn't need modification. The payload folder contains the extracted img files from the original apex, which can be modified.
 
-  ### **2. Repack**
+  ### **23. Repack**
 
   ```shell
   cd path/to/script
